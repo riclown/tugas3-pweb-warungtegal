@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warung Tegal</title>
+    <style>
+        header,
+        section,
+        footer,
+        aside,
+        nav,
+        article,
+        figure,
+        figcaption {
+            display: block;
+        }
+
+        body {
+            color: #666666;
+            background-color: #f9f8f6;
+            background-image: url("img/bg.jpg");
+            background-position: center;
+            font-family: Georgia, Times, serif;
+            line-height: 1.4em;
+            margin: 0px;
+        }
+
+        .wrapper {
+            width: 940px;
+            margin: 20px auto 20px auto;
+            border: 2px solid #000000;
+            background-color: #ffffff;
+        }
+
+        header {
+            height: 160px;
+            background-image: url("img/header.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            text-indent: -9999px;
+            width: 940px;
+            height: 130px;
+            margin: 0px;
+        }
+
+        nav,
+        footer {
+            clear: both;
+            color: #ffffff;
+            background-color: #aeaca8;
+            height: 30px;
+        }
+
+        nav ul {
+            margin: 0px;
+            padding: 5px 0px 4px 30px;
+
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 40px;
+        }
+
+        nav li a {
+            color: #ffffff;
+        }
+
+        nav li a:hover,
+        nav li a.current {
+            color: #000000;
+        }
+
+        article {
+            clear: both;
+            overflow: auto;
+            width: 100%
+        }
+
+        hgroup {
+            margin-top: 40px;
+        }
+
+        figure {
+            float: left;
+            width: 290px;
+            height: 220px;
+            padding: 5px;
+            margin: 20px;
+            border: 1px solid #eeeeee;
+        }
+
+        figcaption {
+            font-size: 90%;
+            text-align: left;
+        }
+
+        aside {
+            width: 230px;
+            float: right;
+            Padding: 0px 0px 0px 20px;
+        }
+
+        aside section a {
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        aside section o:hover {
+            color: #985d6a;
+            background-color: #efefef;
+        }
+
+        a {
+            color: #de6581;
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: normal;
+        }
+
+        h2 {
+            margin: 1em 0px 5px 0px;
+            padding: 0px;
+        }
+
+        h3 {
+            margin: 0px 0px 10px 0px;
+            color: #de6581
+        }
+
+        aside h2 {
+            padding: 30px 0px 10px 0px;
+            color: #de6581;
+        }
+
+        footer {
+            font-size: 80%;
+            padding: 7px 0px 0px 20px;
+        }
+
+        .fig-img {
+            width: 100%;
+        }
+
+        .slideshow-container {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .slideshow-img {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        section {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            width: 659px;
+            float: left;
+            border-right: 1px solid #eeeeee;
+        }
+
+        .youtube-video {
+            display: block;
+            margin: auto;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Warung Tegal</h1>
+            <nav>
+                <ul>
+                    <li><a href="" class="current">Beranda</a></li>
+                    <li><a href="">Daftar Masakan</a></li>
+                    <li><a href="">Katering</a></li>
+                    <li><a href="">Tentang</a></li>
+                    <li><a href="">Kontak</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="slideshow">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="./img/sototegal.jpg" alt="soto" class="slideshow-img">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="./img/peceltegal.jpg" alt="soto" class="slideshow-img">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+        </section>
+        <div class="container">
+            <section class="video">
+                <article>
+                    <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/XLJF0_yEYBg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </article>
+            </section>
+            <section class="courses">
+                <article>
+                    <figure>
+                        <img src="img/sototegal.jpg" alt="soto" class="fig-img">
+                        <figcaption>Soto Indonesia</figcaption>
+                    </figure>
+                    <hgroup>
+                        <h2>Soto babat</h2>
+                        <h3>Makanan Berkuah</h3>
+                    </hgroup>
+                    <p>Soto babat adalah makanan khas Indonesia yang berupa sejenis sup babat dengan kuah yang berwarna
+                        kekuningan.</p>
+                </article>
+                <article>
+                    <figure>
+                        <img src="img/peceltegal.jpg" alt="pecel" class="fig-img">
+                        <figcaption>Pecel Indonesia</figcaption>
+                    </figure>
+                    <hgroup>
+                        <h2>Masakan Pecel</h2>
+                        <h3>Makanan dengan Bumbu Kacang</h3>
+                    </hgroup>
+                    <p>Pecel adalah makanan yang menggunakan bumbu sambal kacang sebagai bahan utamanya yang dicampur dengan
+                        aneka jenis sayuran</p>
+                </article>
+            </section>
+        </div>
+        <aside>
+            <section class="popular-recipes">
+                <h2>Masakan Populer</h2>
+                <a href="">Sayur Sop</a>
+                <a href="">Sayur Asem</a>
+                <a href="">Sayur Lodeh</a>
+                <a href="">Sayur Bayam</a>
+            </section>
+            <section class="contact-details">
+                <h2>Kontak</h2>
+                <p>Warung Tegal<br>
+                    di seluruh Indonesia</p>
+            </section>
+        </aside>
+        <footer>
+            &copy; 2015 Warung Tegal
+        </footer>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>
